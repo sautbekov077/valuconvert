@@ -1,0 +1,115 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Градиент фона */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Ограничение ширины */
+    text-align: center;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Конвертер */
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Расстояние между элементами */
+}
+
+/* Поля ввода и селекты */
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50; /* Цвет при фокусе */
+}
+
+/* Селекты и текстовый разделитель */
+.converter select {
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+.converter span {
+    font-size: 18px;
+    color: #666;
+    margin: 0 10px;
+}
+
+/* Кнопка */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Лёгкий подъём при наведении */
+}
+
+button:active {
+    transform: translateY(0); /* Возврат при нажатии */
+}
+
+/* Результат */
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+}
